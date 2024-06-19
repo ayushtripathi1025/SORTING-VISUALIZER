@@ -1,0 +1,150 @@
+/* Reset default styles and set common typography */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Basic body styling */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Header styling */
+header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Center and limit width of header content */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main heading in header */
+.nav-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Flex layout for algorithm buttons */
+.algos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styling for algorithm selection buttons */
+.algos button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hover effect for algorithm selection buttons */
+.algos button:hover {
+  background-color: blue;
+}
+
+/* Flex layout for array input controls */
+.array-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Styling for input groups within array input section */
+.array-inputs .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for buttons within array input section */
+.array-inputs button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hover effect for buttons within array input section */
+.array-inputs button:hover {
+  background-color: blue;
+}
+
+/* Grid layout for main content sections */
+section {
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Margin and spacing for complexity information containers */
+.Complexity_Containers {
+  margin-top: 20%;
+}
+
+/* Margin for pairs of definitions within complexity containers */
+.Complexity_Containers .Pair_Definitions {
+  margin-top: 20%;
+}
+
+/* Inline display for paragraphs within complexity definitions */
+.Complexity_Containers .Pair_Definitions p {
+  display: inline;
+}
+
+/* Styling for sub-headings within complexity definitions */
+.Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-size: medium;
+  text-transform: none;
+}
+
+/* Padding and underline for specific container headings */
+#Info_Cont1, #Info_Cont2 {
+  padding: 20% 10%;
+}
+
+/* Underline styling for headings within specific containers */
+#Info_Cont1 h3, #Info_Cont2 h3 {
+  text-decoration: underline;
+}
+
+/* Flex layout for array container */
+#array_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 70vh;
+  width: 100%;
+}
+
+/* Styling for individual bars representing array elements */
+.array-bar {
+  margin: 0 2px;
+  background-color: blue;
+  width: 5px;
+  display: inline-block;
+}
+
+/* Utility class to hide elements */
+.hide {
+  display: none;
+}
