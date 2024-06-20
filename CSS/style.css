@@ -1,25 +1,33 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
 /* Reset default styles and set common typography */
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: large;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 /* Basic body styling */
 body {
-  background-color: white;
-  color: black;
+  background-color: #ecedef;
+  color: #111827;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header styling */
 header {
-  background-color: black;
+  background-color: #1e3a8a;
   color: white;
   text-align: center;
   padding: 20px 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Center and limit width of header content */
@@ -32,6 +40,9 @@ header {
 .nav-heading {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 /* Flex layout for algorithm buttons */
@@ -44,17 +55,22 @@ header {
 
 /* Styling for algorithm selection buttons */
 .algos button {
-  background-color: transparent;
-  border: 2px solid white;
+  background-color: #3b82f6;
+  border: none;
   color: white;
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+  
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Hover effect for algorithm selection buttons */
 .algos button:hover {
-  background-color: blue;
+  background-color: #ccd3e0;
+  transform: scale(1.05);
 }
 
 /* Flex layout for array input controls */
@@ -62,6 +78,7 @@ header {
   display: flex;
   justify-content: center;
   gap: 40px;
+  margin-bottom: 20px;
 }
 
 /* Styling for input groups within array input section */
@@ -71,39 +88,83 @@ header {
   align-items: center;
 }
 
+/* Styling for labels within array input section */
+.array-inputs label {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+/* Styling for range inputs */
+.array-inputs input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: #d1d5db;
+  outline: none;
+  height: 8px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.array-inputs input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #416091;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.array-inputs input[type="range"]:hover {
+  background: #9ca3af;
+}
+
+.array-inputs input[type="range"]::-webkit-slider-thumb:hover {
+  background: #385289;
+  transform: scale(1.1);
+}
+
 /* Styling for buttons within array input section */
 .array-inputs button {
-  background-color: transparent;
-  border: 2px solid white;
+  background-color: #30c090;
+  border: none;
   color: white;
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Hover effect for buttons within array input section */
 .array-inputs button:hover {
-  background-color: blue;
+  background-color: #059669;
+  transform: scale(1.05);
 }
 
 /* Grid layout for main content sections */
 section {
-  background-color: white;
-  color: black;
+  background-color: rgb(255, 255, 255);
+  color: #111827;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   gap: 20px;
   padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 /* Margin and spacing for complexity information containers */
 .Complexity_Containers {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 /* Margin for pairs of definitions within complexity containers */
 .Complexity_Containers .Pair_Definitions {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 /* Inline display for paragraphs within complexity definitions */
@@ -119,7 +180,7 @@ section {
 
 /* Padding and underline for specific container headings */
 #Info_Cont1, #Info_Cont2 {
-  padding: 20% 10%;
+  padding: 10% 10%;
 }
 
 /* Underline styling for headings within specific containers */
@@ -134,17 +195,35 @@ section {
   align-items: flex-end;
   height: 70vh;
   width: 100%;
+  background: #e5e7eb;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(169, 179, 112, 0.1);
+  border-radius: 10px;
 }
 
 /* Styling for individual bars representing array elements */
 .array-bar {
   margin: 0 2px;
-  background-color: blue;
+  background-color: #3b82f6;
   width: 5px;
   display: inline-block;
+  transition: height 0.3s, background-color 0.3s;
+  border-radius: 2px;
+}
+
+/* Animation for sorting */
+.array-bar.sorted {
+  background-color: #1a976d !important;
 }
 
 /* Utility class to hide elements */
 .hide {
   display: none;
+}
+.font{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-style: normal;
+  
+
 }
